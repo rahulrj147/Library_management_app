@@ -9,10 +9,10 @@ const memberSchema = new mongoose.Schema({
   gender: { type: String, required: true, enum: ['Male', 'Female'] },
   shift: { type: String, required: true },
   timing: { type: String, required: true },
-  monthlyFees: { type: Number, required: true },
+  monthlyFees: { type: Number, required: false },
   joiningDate: { type: Date, default: Date.now },
   feesPaidTill: { type: Date },
-  paymentMode: { type: String, required: true },
+  paymentMode: { type: String, required: false },
   profilePicture: { type: String }, // URL to the uploaded image
   seat: { type: String },
 }, { timestamps: true });
